@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     PLACEHOLDERS — search for [[ ]] and replace all of them.
+     [[https://cal.com/ageselaos/30min]] 
+     [[Elite Coaching]]    the name of the coaching offer
+     [[Elite Operator]]       name of the $249 package
+     [[Master Operator]]       name of the $500 package
+     [[10+]]         years in Muay Thai / kickboxing
+     [[25]]    how many athletes you currently coach
+     [[25]]         how many you'll take at the launch price
+     [[@age_selaos]]     e.g. @thepolymath
+     Nothing else needs changing. No code knowledge required —
+     open in any text editor, replace, save, upload.
+     ============================================================ -->
+
+<title>Pheonix — Remote strength coaching for entrepreneurs, high-level operators, and athletes</title>
+<meta name="description" content="Remote strength and power coaching for fighters and people who train like them. Programmed around your week, not bolted onto it.">
+<meta property="og:title" content="Pheonix — Strength that shows up in the third round">
+<meta property="og:description" content="Remote strength and power coaching for combat athletes. Tested at week 0, 6 and 12.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0905; --surface:#151209; --line:#332C1A;
+    --bone:#F1EBE3; --ash:#9C948A;
+    --gold:#C8A04B; --gold-deep:#65561D; --gold-soft:#2C2411;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);color:var(--bone);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px;}
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;}
+
+  /* ---------- MARK ---------- */
+  .mark{display:block;width:52px;height:52px;margin:0 auto 20px;}
+  .mark circle{fill:none;stroke:var(--gold);stroke-width:4;}
+  .mark path{fill:var(--gold);}
+
+  /* ---------- HERO ---------- */
+  header{padding:56px 0 64px;text-align:center;border-bottom:1px solid var(--line);}
+  header .eyebrow{font-size:10.5px;color:var(--gold);margin-bottom:20px;}
+  h1{
+    font-family:'Archivo',sans-serif;font-weight:800;
+    font-size:clamp(34px,8.5vw,58px);line-height:1.02;
+    letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:18px;
+  }
+  h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;color:var(--gold);}
+  header p.sub{font-size:16px;color:var(--ash);max-width:460px;margin:0 auto 30px;}
+
+  /* ---------- BUTTON ---------- */
+  .btn{
+    display:inline-block;background:var(--gold);color:var(--ink);
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500;
+    letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;
+    padding:17px 34px;border-radius:2px;transition:transform .15s,background .15s;
+  }
+  .btn:hover{background:#DDB55C;transform:translateY(-1px);}
+  .btn-note{display:block;font-size:12px;color:var(--ash);margin-top:13px;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:58px 0;border-bottom:1px solid var(--line);}
+  h2{
+    font-family:'Archivo',sans-serif;font-weight:700;
+    font-size:clamp(24px,5.5vw,34px);line-height:1.12;
+    letter-spacing:-0.015em;text-transform:uppercase;margin-bottom:20px;
+  }
+  h2 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;color:var(--gold);}
+  .label{font-size:10.5px;color:var(--gold);margin-bottom:14px;}
+  p{font-size:16px;margin-bottom:17px;}
+  p:last-child{margin-bottom:0;}
+  p.lead{font-size:18px;}
+  strong{color:var(--bone);font-weight:600;}
+
+  /* ---------- LISTS ---------- */
+  ul.plain{list-style:none;}
+  ul.plain li{
+    font-size:15.5px;padding:13px 0 13px 26px;position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  ul.plain li:last-child{border-bottom:none;}
+  ul.plain li:before{
+    content:"";position:absolute;left:0;top:21px;
+    width:11px;height:1px;background:var(--gold);
+  }
+  ul.plain li b{color:var(--gold);font-weight:600;}
+
+  /* ---------- TESTS ---------- */
+  .tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0;}
+  .tests div{background:var(--ink);padding:18px 16px;}
+  .tests .n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold-deep);display:block;margin-bottom:7px;}
+  .tests .t{font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:-0.005em;line-height:1.25;}
+
+  /* ---------- NOT FOR ---------- */
+  .notfor{border-left:2px solid var(--gold-deep);padding:4px 0 4px 20px;margin-top:6px;}
+  .notfor li{font-size:15.5px;color:var(--ash);padding:9px 0;list-style:none;}
+
+  /* ---------- PRICE ---------- */
+  .price{text-align:center;padding:66px 0;}
+  .price .fig{
+    font-family:'Archivo',sans-serif;font-weight:800;
+    font-size:clamp(46px,13vw,82px);line-height:1;color:var(--gold);
+    letter-spacing:-0.03em;margin-bottom:8px;
+  }
+  .price .per{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ash);margin-bottom:26px;}
+  .price p{max-width:440px;margin-left:auto;margin-right:auto;color:var(--ash);font-size:15px;}
+
+  /* ---------- TIERS ---------- */
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;text-align:left;}
+  .tier{border:1px solid var(--line);border-radius:3px;padding:22px 20px 20px;}
+  .tier.lead{border-color:var(--gold);}
+  .tn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ash);margin-bottom:10px;}
+  .tier.lead .tn{color:var(--gold);}
+  .tp{font-family:'Archivo',sans-serif;font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;margin-bottom:4px;}
+  .tier.lead .tp{color:var(--gold);}
+  .tper{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ash);margin-bottom:18px;line-height:1.5;}
+  ul.tl{list-style:none;margin-bottom:16px;}
+  ul.tl li{font-size:14px;padding:7px 0 7px 16px;position:relative;border-bottom:1px solid var(--line);}
+  ul.tl li:last-child{border-bottom:none;}
+  ul.tl li:before{content:"";position:absolute;left:0;top:16px;width:8px;height:1px;background:var(--gold-deep);}
+  .tfor{font-size:13px;color:var(--ash);font-style:italic;}
+  @media(max-width:560px){.tiers{grid-template-columns:1fr;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:40px 0 56px;text-align:center;}
+  footer p{font-size:12.5px;color:var(--ash);margin-bottom:9px;}
+  footer a{color:var(--gold);text-decoration:none;}
+
+  @media(max-width:520px){
+    section{padding:46px 0;}
+    header{padding:42px 0 50px;}
+    .btn{display:block;text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<header>
+  <div class="wrap">
+    <svg class="mark" viewBox="0 0 100 100" aria-label="Areteos">
+      <circle cx="50" cy="50" r="45"/>
+      <path d="M50 24 L68 72 L60 72 L50 43 L40 72 L32 72 Z"/>
+    </svg>
+    <p class="eyebrow mono">Remote, Worldwide, Elite Performance</p>
+    <h1>Strength that shows up <em>under fatigue</em></h1>
+    <p class="sub">Remote strength and power coaching for athletes, entrepreneurs, high-level operators and people who train like them. Programmed around your week &#8212; not bolted onto it.</p>
+    <a class="btn" href="https://cal.com/ageselaos/30min">Book a call</a>
+    <span class="btn-note">30 minutes. No charge. No pitch deck.</span>
+  </div>
+</header>
+
+<!-- ==================== PROBLEM ==================== -->
+<section>
+  <div class="wrap">
+    <p class="label mono">01; The problem</p>
+    <h2>You're getting stronger. It <em>isn't showing up.</em></h2>
+    <p class="lead">You lift three times a week and the numbers go up. Then round three arrives, your legs are gone, your rear hand is slow, and the shot that was supposed to land doesn't.</p>
+    <p>The lifting isn't wrong. It's just built for someone whose sport is lifting.</p>
+    <p>Force you can't express fast is decoration. Rotation you can't produce under fatigue doesn't exist in a fight. And a programme that ignores the six hours a week you already spend on the mats is a programme competing with your own training for the same recovery.</p>
+  </div>
+</section>
+
+<!-- ==================== CREDIBILITY ==================== -->
+<section>
+  <div class="wrap">
+    <p class="label mono">02; Who's saying this</p>
+    <h2>Most strength coaches have <em>never been hit</em></h2>
+    <p>10+ years in Muay Thai and kickboxing. Black belts in karate and taekwondo. Currently competing, and have a proven track record of success helping athletes at all levels, executives and high-level individuals.</p>
+    <p><strong>I'm not coaching you through something I read. I'm in the same week you are.</strong></p>
+  </div>
+</section>
+
+<!-- ==================== WHAT YOU GET ==================== -->
+<section>
+  <div class="wrap">
+    <p class="label mono">03; What it involves</p>
+    <h2>What you get, <em>every week</em></h2>
+    <ul class="plain">
+      <li><b>Weekly programming.</b> A new week every Monday, adjusted against what you actually logged. If you spar Tuesday and Thursday, you're not squatting heavy on Monday.</li>
+      <li><b>A weekly check-in, and a live call.</b> Weekly and one-to-one on the full package, monthly and shared on the other.</li>
+      <li><b>Form review.</b> Film anything, any time. Inside 24 hours on weekdays.</li>
+      <li><b>Habit tracker.</b> Daily logging, and I see it. I'll know a week is slipping on day four, not week four.</li>
+      <li><b>Five benchmark tests at week 0, 6 and 12.</b> So we both find out whether this worked.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== TESTS ==================== -->
+<section>
+  <div class="wrap">
+    <p class="label mono">04; The tests</p>
+    <h2>Numbers, <em>not vibes</em></h2>
+    <div class="tests">
+      <div><span class="n">01</span><span class="t">Vertical Jump</span></div>
+      <div><span class="n">02</span><span class="t">Broad Jump</span></div>
+      <div><span class="n">03</span><span class="t">Rotational Throw</span></div>
+      <div><span class="n">04</span><span class="t">Max Force</span></div>
+      <div><span class="n">05</span><span class="t">Repeat Effort</span></div>
+    </div>
+    <p>You film them at the start, at six weeks and at twelve. If the numbers haven't moved, I haven't done my job &#8212; and we'll both be looking at the same evidence.</p>
+    <p><strong>Most online coaching asks you to feel like it's working. I'd rather show you.</strong></p>
+  </div>
+</section>
+
+<!-- ==================== NOT FOR ==================== -->
+<section>
+  <div class="wrap">
+    <p class="label mono">05; Honesty</p>
+    <h2>Don't book a call <em>if</em></h2>
+    <ul class="notfor">
+      <li>&#8212; You're training fewer than three days a week.</li>
+      <li>&#8212; You want to look a certain way more than you want to perform a certain way.</li>
+      <li>&#8212; You're new to lifting and need someone in the room. That's a real need and this isn't it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== PRICE ==================== -->
+<section class="price">
+  <div class="wrap">
+    <p class="label mono"> $500; Price</p>
+
+      <div class="tier lead">
+        <p class="tn">Master Operator</p>
+        <p class="tp">$500</p>
+        <p class="tper">per month $500; 25 at this price, then $750</p>
+        <ul class="tl">
+          <li>Programming built for you, not from a block</li>
+          <li>Habit tracker + weekly check-in</li>
+          <li>Form review twice a week</li>
+          <li>Benchmark tests at week 1, 6, 12</li>
+          <li>Monthly group call</li>
+          <li>Travel version of every block</li>
+          <li>Weekly 1:1 call</li>
+          <li>Priority form review, 24h</li>
+          <li>Progress report at 6 and 12 weeks</li>
+          <li>An Areteos piece, sent in week one</li>
+          <li>Event peaking, taper, fight week, fight day</li>
+        </ul>
+        <p class="tfor">For athletes, high-level operators, entrepreneurs and for people who train like them.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:28px;">Three months minimum on both. Twelve weeks is the shortest honest block &#8212; anything less and we're both guessing. Move between them at any month boundary, no penalty.</p>
+    <p style="margin-top:26px;"><a class="btn" href="https://cal.com/ageselaos/30min">Book a call</a></p>
+    <span class="btn-note">30 minutes. We'll work out which one on the call. If neither fits I'll tell you.</span>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIAL SLOT — leave empty until you have real ones ======
+<section>
+  <div class="wrap">
+    <p class="label mono">07 · Results</p>
+    <h2>Twelve weeks, <em>measured</em></h2>
+  </div>
+</section>
+====================================================================== -->
+
+<footer>
+  <div class="wrap">
+    <p>@age_selaos</p>
+    <p><a href="https://cal.com/ageselaos/30min">Book a call</a></p>
+    <p style="margin-top:18px;font-size:11px;">Strength and performance coaching. Not medical advice. Not a substitute for assessment by a qualified clinician.</p>
+  </div>
+</footer>
+
+</body>
+</html>
